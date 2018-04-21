@@ -1,0 +1,49 @@
+<DOCTYPe <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" >
+    <script type="text/javascript"
+    src="js/vue.js">
+    </script>
+
+</head>
+<body>
+      <main>
+           <main>
+               <h1 align="center"> EJEMPLO 3 </h1>
+               <table>
+                   <thead>
+                       <th> nombre </th>
+                       <th> APELLIDO </th>
+                   </thead>
+                    <tbody>
+                        <tr v-for="(item , idx) in users">
+                            <td>{{ item.nombre }}</td>
+                            <td>{{ item.apellido }}</td>
+                        </tr>
+                    </tbody>
+               </table>
+           </main>
+           {{$data}}
+      </main>   
+
+  <script type="text/javascript">
+         new Vue({
+                 el:'main',
+                 data: {
+                         users:[ 
+                             {'nombre': 'rafael','apellido': 'antepara'  },
+                             {'nombre': 'rafael','apellido': 'antepara'  },
+                         ]
+                       }
+
+         });
+</script>
+</body>
+
+</html>
